@@ -37,7 +37,7 @@ export const EditEvent = ({ event, categories, users }) => {
     values.createdBy = parseInt(values.createdBy);
     try {
       const editedEvent = await fetch(
-        `https://my-musicevents.herokuapp.com//events/${eventId}`,
+        `https://my-musicevents.herokuapp.com/events/${eventId}`,
         {
           method: "PUT",
           body: JSON.stringify(values),

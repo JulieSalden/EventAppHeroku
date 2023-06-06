@@ -5,7 +5,7 @@ import { Formik } from "formik";
 export const Categorypicker = ({ setEventChoice, categories }) => {
   const fetchCatergoryQuery = async (categoryId) => {
     const categoryEvents = await fetch(
-      `https://my-musicevents.herokuapp.com//events?&categoryIds_like=${categoryId}`
+      `https://my-musicevents.herokuapp.com/events?&categoryIds_like=${categoryId}`
     );
     return {
       event: await categoryEvents.json(),

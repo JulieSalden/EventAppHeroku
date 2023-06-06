@@ -5,7 +5,7 @@ import { Formik } from "formik";
 export const FilterEvents = ({ setEventChoice, events }) => {
   const fetchByAz = async () => {
     const sortedAzEvents = await fetch(
-      "https://my-musicevents.herokuapp.com//events?_sort=title&_order=asc"
+      "https://my-musicevents.herokuapp.com/events?_sort=title&_order=asc"
     );
     return { sortedAzEvents: await sortedAzEvents.json() };
   };
